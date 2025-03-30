@@ -16,7 +16,7 @@ enable_testing()
 ##############################
 
 include(CompilerFlags)
-add_compiler_flags(TARGET RaZ_Tests SCOPE PRIVATE)
+add_compiler_flags(TARGET RaZ_Tests SCOPE PRIVATE ${SANITIZERS_OPTION})
 
 if (RAZ_COMPILER_CLANG)
     target_compile_options(
